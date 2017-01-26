@@ -9,7 +9,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git, ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.antigen.zsh
 
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
