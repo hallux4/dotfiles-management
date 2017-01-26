@@ -7,7 +7,7 @@ ZSH_THEME="afowler"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git)
+plugins=(git, ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.antigen.zsh
@@ -19,9 +19,12 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 export PATH=~/DEV/autoputty-python/bin:$PATH
 
+
+#zstyle :omz:plugins:ssh-agent identities id_rsa-lamda
+
 alias reload='source ~/.zshrc'
-alias restart='exec zsh -l'
 alias zshedit='vim ~/.zshrc'
+alias restart='rm ~/.zcompdump*; exec zsh -l'
 alias net1='sudo nethogs eth0'
 alias net2='sudo speedometer -r eth0 -t eth0'
 alias checkip="sudo cat /var/log/syslog | grep 'iptables denied' | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*DPT=[0-9]*' | sed -r 's/DST=.*SPT=[0-9]*//g' | sort | uniq -c | sort -n"
