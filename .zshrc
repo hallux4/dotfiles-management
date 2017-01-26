@@ -30,9 +30,9 @@ alias checkip="sudo cat /var/log/syslog | grep 'iptables denied' | grep -Eo '[0-
 alias checkip-history="sudo cat /var/log/syslog | grep 'iptables denied' | grep -Eo '^.*[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*DPT=[0-9]*' | sed -r 's/vm-private.*MAC=(..:)*..//' | sed -r 's/DST.*SPT=[0-9]*//'"
 alias checkdate='sudo ntpdate 0.fr.pool.ntp.org'
 
-fpath=($fpath ~/DEV/autoputty-python/autocomplete)
-autoload -U compinit
-compinit
+#fpath=($fpath ~/DEV/autoputty-python/autocomplete)
+#autoload -U compinit
+#compinit
 
 antigen bundle virtualenvwrapper
 antigen bundle colorize
