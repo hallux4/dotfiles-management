@@ -3,10 +3,13 @@
 ## source:
 ## https://github.com/justone/dotfiles
 
-## Requirements:
+## Requirements (will be scripted):
 
+    $ apt install python vim-nox exuberant-ctags git python-pip autojump
     $ sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
-    $ apt install python vim-nox exuberant-ctags git python-pip
+    $ sudo pip install --upgrade ipwhois
+    $ sudo pip install --upgrade pythonwhois
+    $ sudo sed -i '1s/^/#!\/usr\/bin\/env python\n/' /usr/local/bin/ipwhois_cli.py
 
 ## How to:
 
