@@ -352,6 +352,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.pyc$\|\.pyo$',
   \ }
 
+let mapleader=","
+
 " Syntastic ------------------------------
 
 " show list of errors and warnings on the current file
