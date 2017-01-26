@@ -16,20 +16,17 @@ bindkey "\033[4~" end-of-line
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
-#export PATH=~/DEV/autoputty-python/bin:$PATH
 
 
-#zstyle :omz:plugins:ssh-agent identities id_rsa-lamda
-
-alias reload='source ~/.zshrc'
-alias zshedit='vim ~/.zshrc'
-#alias restart='rm ~/.zcompdump*; exec zsh -l'
+alias r='source ~/.zshrc'
+alias z='vim ~/.zshrc'
 alias net1='sudo nethogs eth0'
 alias net2='sudo speedometer -r eth0 -t eth0'
 alias checkip="sudo cat /var/log/syslog | grep 'iptables denied' | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*DPT=[0-9]*' | sed -r 's/DST=.*SPT=[0-9]*//g' | sort | uniq -c | sort -n"
 alias checkip-history="sudo cat /var/log/syslog | grep 'iptables denied' | grep -Eo '^.*[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.*DPT=[0-9]*' | sed -r 's/vm-private.*MAC=(..:)*..//' | sed -r 's/DST.*SPT=[0-9]*//'"
 alias checkdate='sudo ntpdate 0.fr.pool.ntp.org'
 
+#export PATH=~/DEV/autoputty-python/bin:$PATH
 #fpath=($fpath ~/DEV/autoputty-python/autocomplete)
 #autoload -U compinit
 #compinit
@@ -40,11 +37,4 @@ antigen bundle colorize
 export PROJECT_HOME=~/DEV
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
-
-#r() {
-#  local f
-#  f=(~/DEV/autoputty-python/autocomplete/*(.))
-#  unfunction $f:t 2> /dev/null
-#  autoload -U $f:t
-#}
 
