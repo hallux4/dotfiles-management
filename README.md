@@ -12,7 +12,7 @@
     $ sudo sed -i '1s/^/#!\/usr\/bin\/env python\n/' /usr/local/bin/ipwhois_cli.py
 
     populate autojump
-    $ for elem in $(find ~/ -type d -not -path '*/\.*'); do cd $elem; done
+    $ for elem in $(find ~/ -type d -not -path '*/\.*'); do cd $elem; echo $elem; done
 
 ## How to:
 
