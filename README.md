@@ -3,20 +3,8 @@
 ## source:
 ## https://github.com/justone/dotfiles
 
-## Overview
-
-This repo is a skeleton/template repo for tracking dotfiles.  It contains
-a utility ([dfm](https://github.com/justone/dfm)) to help with managing and
-updating your dotfiles.
-
-## Using this repo
-
-First, fork this repo.
-
-Then, add your dotfiles:
-
-    $ git clone git@github.com:username/dotfiles.git .dotfiles
-    $ cd .dotfiles
+    $ git clone git@github.com:username/dotfiles-managements.git .dotfiles-management
+    $ cd .dotfiles-management
     $  # edit files
     $  # edit files
     $ git push origin master
@@ -24,8 +12,8 @@ Then, add your dotfiles:
 Finally, to install your dotfiles onto a new system:
 
     $ cd $HOME
-    $ git clone git@github.com:username/dotfiles.git .dotfiles
-    $ ./.dotfiles/bin/dfm install # creates symlinks to install files
+    $ git clone git@github.com:username/dotfiles-managements.git .dotfiles-management
+    $ ./.dotfiles-management/bin/dfm install # creates symlinks to install files
 
 ## Full documentation
 
