@@ -17,8 +17,9 @@ Finally, to install your dotfiles onto a new system:
 
 Requirements:
 
-sudo pip install virtualenvwrapper
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
+
+apt install python vim-nox exuberant-ctags git python-pip
 
 ## Full documentation
 
