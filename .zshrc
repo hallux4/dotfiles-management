@@ -6,7 +6,7 @@ ZSH_THEME="junkfood"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git, ssh-agent)
+plugins=(git, ssh-agent, virtualenvwrapper, colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -30,10 +30,8 @@ alias checkdate='sudo ntpdate 0.fr.pool.ntp.org'
 #autoload -U compinit
 #compinit
 
-antigen bundle virtualenvwrapper
-antigen bundle colorize
-
 export PROJECT_HOME=~/DEV
 export WORKON_HOME=~/Envs
+mkdir -p $PROJECT_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 
