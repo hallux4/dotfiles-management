@@ -15,11 +15,10 @@ Finally, to install your dotfiles onto a new system:
     $ git clone git@github.com:username/dotfiles-managements.git .dotfiles-management
     $ ./.dotfiles-management/bin/dfm install # creates symlinks to install files
 
-Requirements:
+## Requirements:
 
-sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
-
-apt install python vim-nox exuberant-ctags git python-pip
+    $ sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
+    $ apt install python vim-nox exuberant-ctags git python-pip
 
 ## Full documentation
 
