@@ -3,22 +3,17 @@
 ## source:
 ## https://github.com/justone/dotfiles
 
-    $ git clone git@github.com:username/dotfiles-managements.git .dotfiles-management
-    $ cd .dotfiles-management
-    $  # edit files
-    $  # edit files
-    $ git push origin master
+## Requirements:
 
-Finally, to install your dotfiles onto a new system:
+    $ sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
+    $ apt install python vim-nox exuberant-ctags git python-pip
+
+## How to:
 
     $ cd $HOME
     $ git clone git@github.com:username/dotfiles-managements.git .dotfiles-management
     $ ./.dotfiles-management/bin/dfm install # creates symlinks to install files
-
-Requirements:
-
-sudo pip install virtualenvwrapper
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    $ vim -E -u $HOME/.vimrc +qall
 
 ## Full documentation
 
