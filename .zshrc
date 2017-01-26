@@ -17,7 +17,7 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 
-alias r='source ~/.zshrc'
+alias rl='source ~/.zshrc'
 alias z='vim ~/.zshrc'
 alias net1='sudo nethogs eth0'
 alias net2='sudo speedometer -r eth0 -t eth0'
