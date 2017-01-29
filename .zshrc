@@ -7,7 +7,7 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 #ENABLE_CORRECTION="true"
 
-plugins=(git, ssh-agent, virtualenvwrapper, colorize, zsh-syntax-highlighting)
+plugins=(git, ssh-agent, virtualenvwrapper, colorize, zsh-syntax-highlighting, nyan, colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 

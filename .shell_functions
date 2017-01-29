@@ -16,7 +16,7 @@ function f() {
 }
 
 # List all files, long format, colorized, permissions in octal
-function la() {
+function las() {
    ls -l  "$@" | awk '
     {
       k=0;
@@ -143,7 +143,7 @@ webmify () {
 # https://github.com/steckel/Git-Nyan-Graph/blob/master/nyan.sh
 # If you want big animated version: `telnet miku.acm.uiuc.edu`
 
-function nyan()
+function nyan2()
 {
     RED="$(tput setaf 1)"
     GREEN="$(tput setaf 2)"
