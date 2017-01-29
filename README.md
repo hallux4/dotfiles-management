@@ -17,7 +17,7 @@
 ## How to:
 
     $ cd $HOME
-    $ git clone git@github.com:username/dotfiles-managements.git .dotfiles-management
+    $ git clone https://github.com/hallux4/dotfiles-management.git .dotfiles-management
     $ ./.dotfiles-management/bin/dfm install # creates symlinks to install files
     $ vim -E -u $HOME/.vimrc +qall
 
