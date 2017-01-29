@@ -72,9 +72,6 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
 
-# Copy my public key to the pasteboard
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
-
 # Flush DNS cache
 alias flushdns="dscacheutil -flushcache"
 
@@ -156,12 +153,6 @@ alias free_diskspace_report="diskspace_report"
 
 # File size
 alias fs="stat -f \"%z bytes\""
-
-# zshrc config
-alias zshrc="${EDITOR} ${$(cd -P $(dirname $0) && cd ..; pwd -P)}"
-
-# zsh.local config
-alias localrc="if [[ -a ~/.zsh.local ]]; then ${EDITOR} ~/.zsh.local; fi"
 
 # HTTP Requests. One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
