@@ -13,7 +13,7 @@ source $ZSH/oh-my-zsh.sh
 
 for file in $HOME/.{shell_exports,shell_aliases,shell_functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
-  echo "$file"
+#  echo "$file"
 done;
 unset file;
 
