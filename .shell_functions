@@ -5,8 +5,9 @@
 ##
 
 # Create a new directory and enter it
-function md() {
-  mkdir -p "$@" && cd "$@"
+function mds() {
+    echo "Create directory : $@"
+    mkdir -p "$@" && cd "$_"  
 }
 
 # find shorthand
