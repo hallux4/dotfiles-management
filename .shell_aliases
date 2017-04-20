@@ -151,6 +151,8 @@ alias ssl_expire="./.ssl_expiry_date.sh"
 alias diskspace_report="df -P -kHl"
 alias free_diskspace_report="diskspace_report"
 
+alias pull="eval $(ssh-agent -s) ssh-add ~/.ssh/id_rsa-lamda; cd ~/.dotfiles-management; git pull; rl; cd -;"
+
 # File size
 alias fs="stat -f \"%z bytes\""
 
