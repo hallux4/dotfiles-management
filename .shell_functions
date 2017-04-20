@@ -125,7 +125,7 @@ gifify () {
 function ipwhois ()
 {
     #echo "fuck" > 1 
-    python /usr/local/bin/ipwhois_cli.py --addr $1 --hr --show_name --colorize --depth 1
+    python /usr/local/bin/ipwhois_cli.py --addr $1 --hr --show_name --colorize --depth 1 --json | tr ',' '\n' | egrep -v ': null'
 }
 
 function domwhois ()
