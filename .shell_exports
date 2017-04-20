@@ -1,6 +1,10 @@
 # Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
+#export LC_ALL="en_US.UTF-8"
+#export LANG="en_US"
+
+export LANGUAGE="fr_FR.UTF-8"
+export LANG="fr_FR.UTF-8"
+export LC_ALL="fr_FR.UTF-8"
 
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
