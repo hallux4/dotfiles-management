@@ -12,7 +12,7 @@ function mds() {
 
 # find shorthand
 function f() {
-  find . -name "$1" 2>&1 | grep -v 'Permission denied'
+  find . -name "*$1*" 2>&1 | grep -v 'Permission denied'
 }
 
 # List all files, long format, colorized, permissions in octal
