@@ -126,7 +126,7 @@ alias gcln='git clean -xfd' # remove untracked files
 
 alias virsh='virsh --connect qemu:///system'
 alias kvmm='virt-manager -c qemu+ssh://kvmhost/system 2> /dev/null &'
-alias kvmc="virt-viewer -c qemu+ssh://kvmhost/system $1 2> /dev/null &"
+alias kvmc='kvmcf() { host=$1; virt-viewer -c qemu+ssh://kvmhost/system $host }; kvmcf 2>/dev/null'
 
 alias ss='eval $(ssh-agent -s); ssh-add $HOME/.ssh/id_rsa-lamda;'
 
