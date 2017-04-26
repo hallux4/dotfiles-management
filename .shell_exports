@@ -11,6 +11,8 @@ bindkey "\033[4~" end-of-line
 
 export EDITOR='vim'
 
+# for WSL
+export DISPLAY=:0.0
 
 export MANPAGER="less -X"
 
