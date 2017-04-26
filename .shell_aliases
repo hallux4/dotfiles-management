@@ -126,6 +126,8 @@ alias gcln='git clean -xfd' # remove untracked files
 
 alias virsh='virsh --connect qemu:///system'
 
+alias ss="eval $(ssh-agent -s); ssh-add $HOME/.ssh/id_rsa-lamda"
+
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
