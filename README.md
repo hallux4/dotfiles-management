@@ -5,7 +5,7 @@
 
 ## Requirements (will be scripted):
 
-    ``` bash
+    ```bash
     sudo apt install python vim-nox exuberant-ctags git python-dev  python-pip
     sudo pip install --upgrade pip
     sudo pip install --upgrade ipwhois
@@ -17,7 +17,7 @@
 
 ## How to:
 
-    ``` bash
+    ```bash
     cd $HOME
     git clone https://github.com/hallux4/dotfiles-management.git .dotfiles-management
     ./.dotfiles-management/bin/dfm install # creates symlinks to install files
