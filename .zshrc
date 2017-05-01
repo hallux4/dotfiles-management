@@ -27,5 +27,4 @@ export WORKON_HOME=~/Envs
 mkdir -p $PROJECT_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 
-source /usr/share/autojump/autojump.sh
 autoload -U compinit && compinit -u
