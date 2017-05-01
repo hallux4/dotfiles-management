@@ -6,7 +6,7 @@
 ## Requirements (will be scripted):
 
 ```bash
-sudo apt install python vim-nox exuberant-ctags git python-dev  python-pip
+sudo apt install python vim-nox exuberant-ctags git python-dev  python-pip zsh
 sudo pip install --upgrade pip
 sudo pip install --upgrade ipwhois
 sudo pip install --upgrade pythonwhois
