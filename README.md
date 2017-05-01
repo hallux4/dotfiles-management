@@ -5,21 +5,24 @@
 
 ## Requirements (will be scripted):
 
-    $ apt install python vim-nox exuberant-ctags git python-pip autojump
-    $ sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
-    $ sudo pip install --upgrade ipwhois
-    $ sudo pip install --upgrade pythonwhois
-    $ sudo sed -i '1s/^/#!\/usr\/bin\/env python\n/' /usr/local/bin/ipwhois_cli.py
-
-    populate autojump
-    $ for elem in $(find ~/ -type d -not -path '*/\.*'); do cd $elem; echo $elem; done
+    ``` bash
+    sudo apt install python vim-nox exuberant-ctags git python-dev  python-pip
+    sudo pip install --upgrade pip
+    sudo pip install --upgrade ipwhois
+    sudo pip install --upgrade pythonwhois
+    sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
+    
+    sudo sed -i '1s/^/#!\/usr\/bin\/env python\n/' /usr/local/bin/ipwhois_cli.py
+    ```
 
 ## How to:
 
-    $ cd $HOME
-    $ git clone https://github.com/hallux4/dotfiles-management.git .dotfiles-management
-    $ ./.dotfiles-management/bin/dfm install # creates symlinks to install files
-    $ vim -E -u $HOME/.vimrc +qall
+    ``` bash
+    cd $HOME
+    git clone https://github.com/hallux4/dotfiles-management.git .dotfiles-management
+    ./.dotfiles-management/bin/dfm install # creates symlinks to install files
+    vim -E -u $HOME/.vimrc +qall
+    ```
 
 ## Full documentation
 
