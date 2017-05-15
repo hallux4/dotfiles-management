@@ -122,6 +122,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Vue.js syntax and highlighting
 Plugin 'tao12345666333/vim-vue'
 
+Plugin 'saltstack/salt-vim'
+
 " ============================================================================
 " Install plugins the first time vim runs
 
