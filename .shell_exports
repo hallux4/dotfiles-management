@@ -10,6 +10,7 @@ bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
 
 export EDITOR='vim'
+export PANEL_FIFO="/tmp/panel-fifo"
 
 # for WSL
 export DISPLAY=:0.0
