@@ -9,6 +9,9 @@ export LC_ALL="fr_FR.UTF-8"
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 export EDITOR='vim'
 export PANEL_FIFO="/tmp/panel-fifo"
 
