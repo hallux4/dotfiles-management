@@ -22,10 +22,6 @@ unset file;
 #autoload -U compinit
 #compinit
 
-export PROJECT_HOME=~/DEV
-export WORKON_HOME=~/Envs
-export GOBIN=~/go/bin
-
 mkdir -p $PROJECT_HOME
 mkdir -p $GOBIN
 

@@ -9,13 +9,15 @@ export LC_ALL="en_US.UTF-8"
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
 
+export PROJECT_HOME=~/DEV
+export WORKON_HOME=~/Envs
+
+export GOBIN=$HOME/go/bin
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/DEV/Go-dev
-export GOPATH=$HOME/go/bin
+export PATH="$GOBIN:$GOROOT/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$GOPATH/bin:$GOROOT/bin:$PATH"
-
 eval "$(rbenv init -)"
 
 export EDITOR='vim'
