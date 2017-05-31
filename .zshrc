@@ -24,7 +24,11 @@ unset file;
 
 export PROJECT_HOME=~/DEV
 export WORKON_HOME=~/Envs
+export GOBIN=~/go/bin
+
 mkdir -p $PROJECT_HOME
+mkdir -p $GOBIN
+
 source /usr/local/bin/virtualenvwrapper.sh
 
 autoload -U compinit && compinit -u
