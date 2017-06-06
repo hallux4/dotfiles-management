@@ -22,8 +22,8 @@ unset file;
 #autoload -U compinit
 #compinit
 
-mkdir -p $PROJECT_HOME
-mkdir -p $GOBIN
+#mkdir -p $PROJECT_HOME
+#mkdir -p $GOBIN
 
 source /usr/local/bin/virtualenvwrapper.sh
 
