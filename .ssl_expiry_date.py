@@ -9,6 +9,12 @@ __email__ = "adrien.pujol@crashdump.fr"
 __status__ = "Development"
 __doc__ = "Check a TLS certificate validity."
 
+# apt install libssl-dev
+# pip install pyopenssl
+# exemple: ssl_expire mdph74.fr
+# 357
+
+
 import argparse
 import socket
 from datetime import datetime
