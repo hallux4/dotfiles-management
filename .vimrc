@@ -74,7 +74,7 @@ Plugin 'garbas/vim-snipmate'
 " awesome colorscheme
 Plugin 'tomasr/molokai'
 " Git/mercurial/others diff icons on the side of the file lines
-Plugin 'mhinz/vim-signify'
+"Plugin 'mhinz/vim-signify'
 " Automatically sort python imports
 Plugin 'fisadev/vim-isort'
 " Drag visual blocks arround
@@ -190,7 +190,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 syntax on
 
 " show line numbers
-set nu
+" set nu
 
 " tab navigation mappings
 map tn :tabn<CR>
