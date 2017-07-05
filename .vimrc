@@ -5,6 +5,8 @@
 " no vi-compatible
 set nocompatible
 
+set backspace=2 " make backspace work like most other apps "
+
 " Setting up Vundle - the best vim plugin manager
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
