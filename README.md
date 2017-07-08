@@ -6,11 +6,13 @@
 ## Requirements (will be scripted):
 
 ```bash
-sudo apt install python vim-nox exuberant-ctags git python-dev  python-pip zsh ntpdate
+sudo apt install vim-nox exuberant-ctags git python-dev python3-dev  python-pip python3-pip zsh ntpdate
 sudo pip install --upgrade pip
+sudo pip3 install --upgrade pip
 sudo pip install --upgrade ipwhois
 sudo pip install --upgrade pythonwhois
 sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
+sudo pip3 install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
 
 sudo sed -i '1s/^/#!\/usr\/bin\/env python\n/' /usr/local/bin/ipwhois_cli.py
 
