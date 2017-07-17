@@ -19,6 +19,7 @@ export WORKON_HOME=~/Envs
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 eval "$(rbenv init -)"
 
 export EDITOR='vim'
