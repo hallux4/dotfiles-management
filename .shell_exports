@@ -18,6 +18,7 @@ export WORKON_HOME=~/Envs
 #export PATH="$GOBIN:$GOROOT/bin:$PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 eval "$(rbenv init -)"
 
 export EDITOR='vim'
