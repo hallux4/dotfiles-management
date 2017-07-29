@@ -6,7 +6,7 @@
 ## Requirements (will be scripted):
 
 ```bash
-sudo apt build-essential
+sudo apt install build-essential
 sudo apt install vim-nox exuberant-ctags git python-dev python3-dev  python-pip python3-pip zsh ntpdate python-setuptools python3-setuptools
 sudo pip install --upgrade pip
 sudo pip3 install --upgrade pip
