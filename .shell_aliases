@@ -141,7 +141,7 @@ alias gist-paste="gist --private --copy --paste --filename"  # gist-paste filena
 alias gist-file="gist --private --copy"  # gist-file filename.ext -- create private Gist from a file
 
 # Networking. IP address, dig, DNS
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip2="dig +short myip.opendns.com @resolver1.opendns.com"
 alias dig="dig +nocmd any +multiline +noall +answer"
 
 # View HTTP traffic
