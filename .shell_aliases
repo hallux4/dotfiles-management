@@ -68,9 +68,7 @@ alias lsd='ls -l | grep "^d"'
 alias c='pygmentize -O style=monokai -f console256 -g'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
+alias ip2="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print \$2}'"
 
 # Flush DNS cache
 alias flushdns="dscacheutil -flushcache"
@@ -141,7 +139,6 @@ alias gist-paste="gist --private --copy --paste --filename"  # gist-paste filena
 alias gist-file="gist --private --copy"  # gist-file filename.ext -- create private Gist from a file
 
 # Networking. IP address, dig, DNS
-alias ip2="dig +short myip.opendns.com @resolver1.opendns.com"
 alias dig="dig +nocmd any +multiline +noall +answer"
 
 # View HTTP traffic
