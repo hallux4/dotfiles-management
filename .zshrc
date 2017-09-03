@@ -28,3 +28,5 @@ mkdir -p $PROJECT_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 
 autoload -U compinit && compinit -u
+
+eval "$(pyenv init -)"
