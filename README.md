@@ -20,6 +20,8 @@ sudo sed -i '1s/^/#!\/usr\/bin\/env python\n/' /usr/local/bin/ipwhois_cli.py
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
 # check localtime
 # ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 
