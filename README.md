@@ -34,6 +34,10 @@ cd $HOME
 git clone https://github.com/hallux4/dotfiles-management.git .dotfiles-management
 ./.dotfiles-management/bin/dfm install # creates symlinks to install files
 vim -E -u $HOME/.vimrc +qall
+chsh -s $(which zsh)
+
+#FOR WSL only (Windows)
+unsetopt BG_NICE
 ```
 
 ## Full documentation

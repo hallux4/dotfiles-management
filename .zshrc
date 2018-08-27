@@ -17,6 +17,9 @@ for file in $HOME/.{shell_exports,shell_aliases,shell_functions}; do
 done;
 unset file;
 
+#for WSL
+unsetopt BG_NICE
+
 #export PATH=~/DEV/autoputty-python/bin:$PATH
 #fpath=($fpath ~/DEV/autoputty-python/autocomplete)
 #autoload -U compinit
@@ -31,3 +34,11 @@ autoload -U compinit && compinit -u
 
 eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv init -)"
+
+if [ -t 1 ]; then  
+  cd ~
+fi  
+
+if [ -f ~/.dir_colors ]; then  
+  eval `dircolors ~/.dir_colors`
+fi 
