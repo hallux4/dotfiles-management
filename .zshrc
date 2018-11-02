@@ -35,12 +35,35 @@ autoload -U compinit && compinit -u
 eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv init -)"
 
-# ssh-agent multi terminal
-export SSH_AUTH_SOCK=~/.ssh/ssh-agent.$HOSTNAME.sock
-ssh-add -l 2>/dev/null >/dev/null
-if [ $? -ge 2 ]; then
-  ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
+if test ! -n "$SSH_AUTH_SOCK"
+then
+  for f in /tmp/ssh-*/agent.*(=Nu:$LOGNAME:)
+  do
+    SSH_AUTH_SOCK=${f}
+    export SSH_AUTH_SOCK
+    if ssh-add -l >/dev/null 2>/dev/null
+    then
+        echo SSH_AUTH_SOCK=${f}
+        break
+    else
+        unset SSH_AUTH_SOCK
+    fi
+  done
 fi
+
+if test  -d $HOME/.ssh -a "$SSH_AUTH_SOCK" = ""
+then
+    eval $(ssh-agent)
+    ssh-add
+fi
+
+
+## ssh-agent multi terminal
+#export SSH_AUTH_SOCK=~/.ssh/ssh-agent.$HOSTNAME.sock
+#ssh-add -l 2>/dev/null >/dev/null
+#if [ $? -ge 2 ]; then
+  #ssh-agent -a "$SSH_AUTH_SOCK" >/dev/null
+#fi
 
 if [ -t 1 ]; then  
   cd ~
