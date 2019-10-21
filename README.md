@@ -13,7 +13,6 @@ sudo pip3 install --upgrade pip
 sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
 sudo pip3 install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
 
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
