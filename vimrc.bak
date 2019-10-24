@@ -1,16 +1,11 @@
-scriptencoding utf-8
-" ============================================================================
-" Author: TaoBeier
-" Blog: http://moelove.info
-" Version: v18.09.0
-" Update Time: 2018-09-01
-
 " ============================================================================
 " Vundle initialization
 " Avoid modify this section, unless you are very sure of what you are doing
 
 " no vi-compatible
 set nocompatible
+
+set backspace=2 " make backspace work like most other apps "
 
 " Setting up Vundle - the best vim plugin manager
 let iCanHazVundle=1
@@ -29,7 +24,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Plugins
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'gmarik/vundle'
 
 " ============================================================================
 " Active plugins
@@ -37,6 +32,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins from github repos:
 
+" Python and PHP Debugger
+Plugin 'fisadev/vim-debug.vim'
 " Better file browser
 Plugin 'scrooloose/nerdtree'
 " Code commenter
@@ -44,14 +41,14 @@ Plugin 'scrooloose/nerdcommenter'
 " Class/module browser
 Plugin 'majutsushi/tagbar'
 " Code and files fuzzy finder
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 " Extension to ctrlp, for fuzzy command finder
 Plugin 'fisadev/vim-ctrlp-cmdpalette'
 " Zen coding
 Plugin 'mattn/emmet-vim'
-" A Git wrapper so awesome
+" Maybe the best Git integration
 Plugin 'tpope/vim-fugitive'
-" Tab management for Vim
+" Tab list panel
 Plugin 'kien/tabman.vim'
 " Airline
 Plugin 'vim-airline/vim-airline'
@@ -68,7 +65,7 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'michaeljsmith/vim-indent-object'
 " Python mode (indentation, doc, refactor, lints, code checking, motion and
 " operators, highlighting, run and ipdb breakpoints)
-Plugin 'python-mode/python-mode'
+Plugin 'klen/python-mode'
 " Better autocompletion
 Plugin 'Shougo/neocomplcache.vim'
 " Snippets manager (SnipMate), dependencies, and snippets repo
@@ -79,7 +76,7 @@ Plugin 'garbas/vim-snipmate'
 " awesome colorscheme
 Plugin 'tomasr/molokai'
 " Git/mercurial/others diff icons on the side of the file lines
-Plugin 'mhinz/vim-signify'
+"Plugin 'mhinz/vim-signify'
 " Automatically sort python imports
 Plugin 'fisadev/vim-isort'
 " Drag visual blocks arround
@@ -87,17 +84,30 @@ Plugin 'fisadev/dragvisuals.vim'
 " Window chooser
 Plugin 't9md/vim-choosewin'
 " Python and other languages code checker
-Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/syntastic'
 " Paint css colors with the real color
 Plugin 'lilydjwg/colorizer'
 " Relative numbering of lines (0 is the current line)
-" Require Vim 7.3+
+" (disabled by default because is very intrusive and can't be easily toggled
+" on/off. When the plugin is present, will always activate the relative 
+" numbering every time you go to normal mode. Author refuses to add a setting 
+" to avoid that)
 " Plugin 'myusuf3/numbers.vim'
 
+" Plugins from vim-scripts repos:
+
+" Search results counter
+Plugin 'IndexedSearch'
+" XML/HTML tags navigation
+Plugin 'matchit.zip'
+" Gvim colorscheme
+Plugin 'Wombat'
+" Yank history navigation
+Plugin 'YankRing.vim'
 " javascript complete after install the plugin, you must cd the install
 " directory and run `npm install`, then add a .tern-project config file
 " the doc at http://ternjs.net/doc/manual.html#vim
-Plugin 'ternjs/tern_for_vim'
+Plugin 'marijnh/tern_for_vim'
 " Golang Plugins
 Plugin 'fatih/vim-go'
 " JSX syntax highlight.
@@ -113,23 +123,8 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'mustache/vim-mustache-handlebars'
 " Vue.js syntax and highlighting
 Plugin 'tao12345666333/vim-vue'
-" True Sublime Text style multiple selections for Vim
-Plugin 'terryma/vim-multiple-cursors'
-" Modern database interface for Vim
-Plugin 'tpope/vim-dadbod'
-" Dockerfile support
-Plugin 'ekalinin/Dockerfile.vim'
 
-" Plugins from vim-scripts repos:
-
-" Search results counter
-Plugin 'IndexedSearch'
-" XML/HTML tags navigation
-Plugin 'matchit.zip'
-" Gvim colorscheme
-Plugin 'Wombat'
-" Yank history navigation
-Plugin 'YankRing.vim'
+Plugin 'saltstack/salt-vim'
 
 " ============================================================================
 " Install plugins the first time vim runs
@@ -167,13 +162,10 @@ set confirm
 set nobackup
 " other settings 
 set langmenu=zh_CN.UTF-8
-set mouse=a
+"set mouse=a
 set whichwrap+=<,>,h,l,[,]
 set background=dark
 set encoding=utf-8
-
-set backspace=2 " make backspace work like most other apps
-set backspace=indent,eol,start
 
 " tab length exceptions on some file types
  autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -200,7 +192,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 syntax on
 
 " show line numbers
-set nu
+" set nu
 
 " tab navigation mappings
 map tn :tabn<CR>
@@ -307,11 +299,24 @@ nmap ,t :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
-
 " Tasklist ------------------------------
 
 " show pending tasks list
-"map <F2> :TaskList<CR>
+map <F2> :TaskList<CR>
+
+" Vim-debug ------------------------------
+
+" disable default mappings, have a lot of conflicts with other plugins
+let g:vim_debug_disable_mappings = 1
+" add some useful mappings
+" map <F5> :Dbg over<CR>
+" map <F6> :Dbg into<CR>
+" map <F7> :Dbg out<CR>
+" map <F8> :Dbg here<CR>
+" map <F9> :Dbg break<CR>
+" map <F10> :Dbg watch<CR>
+" map <F11> :Dbg down<CR>
+" map <F12> :Dbg up<CR>
 
 " CtrlP ------------------------------
 
@@ -351,13 +356,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.pyc$\|\.pyo$',
   \ }
 
+let mapleader=","
+
 " Syntastic ------------------------------
 
 " show list of errors and warnings on the current file
 nmap <leader>e :Errors<CR>
-" turn to next or previous errors, after open errors list
-nmap <leader>n :lnext<CR>
-nmap <leader>p :lprevious<CR>
 " check also when just opened the file
 let g:syntastic_check_on_open = 1
 " syntastic checker for javascript.
@@ -374,8 +378,6 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_quiet_messages = {
-    \ "regex":   'invalid-name\|missing-docstring'}
 
 " Python-mode ------------------------------
 

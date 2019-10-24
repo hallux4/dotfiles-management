@@ -1,7 +1,8 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="junkfood"
+#ZSH_THEME="af-magic"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -28,7 +29,7 @@ unsetopt BG_NICE
 mkdir -p $PROJECT_HOME
 
 
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh  
 
 autoload -U compinit && compinit -u
 

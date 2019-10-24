@@ -63,3 +63,5 @@ less_options=(
 export LESS="${less_options[*]}"
 export PAGER='less'
 
+export DOCKER_HOST=tcp://localhost:2375
+
