@@ -8,6 +8,7 @@ scriptencoding utf-8
 " ============================================================================
 " Vundle initialization
 " Avoid modify this section, unless you are very sure of what you are doing
+set mouse=
 
 " no vi-compatible
 set nocompatible
@@ -167,7 +168,7 @@ set confirm
 set nobackup
 " other settings 
 set langmenu=zh_CN.UTF-8
-set mouse=a
+"set mouse=a
 set whichwrap+=<,>,h,l,[,]
 set background=dark
 set encoding=utf-8
@@ -571,6 +572,8 @@ map <C-S-Right> :tabn<CR>
 imap <C-S-Right> <ESC>:tabn<CR>
 map <C-S-Left> :tabp<CR>
 imap <C-S-Left> <ESC>:tabp<CR>
+
+"source /usr/share/vim/vim*/defaults.vim
 
 " Uncomment the following to have Vim jump to the last position when                                                       
 " reopening a file

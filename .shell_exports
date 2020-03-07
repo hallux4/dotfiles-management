@@ -26,6 +26,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 #export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
+export LS_COLORS="$(vivid generate molokai)"
+
 export EDITOR='vim'
 export PANEL_FIFO="/tmp/panel-fifo"
 
