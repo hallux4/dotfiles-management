@@ -7,19 +7,8 @@
 
 ```bash
 sudo apt install build-essential
-sudo apt install vim-nox exuberant-ctags git python-dev python3-dev  python-pip python3-pip zsh ntpdate python-setuptools python3-setuptools
-sudo pip install --upgrade pip
-sudo pip3 install --upgrade pip
-sudo pip install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
-sudo pip3 install virtualenvwrapper dbgp vim-debug pep8 flake8 pyflakes isort
-
-curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
-
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-
-# check localtime
-# ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
-
+sudo apt install python vim ctags git zsh ntpdate
+sudo pip install pep8 flake8 pyflakes isort
 ```
 
 ## How to:
@@ -30,9 +19,6 @@ git clone https://github.com/hallux4/dotfiles-management.git .dotfiles-managemen
 ./.dotfiles-management/bin/dfm install # creates symlinks to install files
 vim -E -u $HOME/.vimrc +qall
 chsh -s $(which zsh)
-
-#FOR WSL only (Windows)
-unsetopt BG_NICE
 ```
 
 ## Full documentation
