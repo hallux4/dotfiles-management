@@ -7,7 +7,7 @@
 
 ```bash
 sudo apt install build-essential
-sudo apt install python vim ctags git zsh ntpdate
+sudo apt install python vim exuberant-ctags git zsh ntpdate
 sudo pip install pep8 flake8 pyflakes isort
 ```
 
