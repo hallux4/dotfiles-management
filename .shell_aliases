@@ -123,8 +123,8 @@ alias virsh='virsh --connect qemu:///system'
 alias kvmm='virt-manager -c qemu+ssh://kvmhost/system 2> /dev/null &'
 alias kvmc='kvmcf() { host=$1; virt-viewer -c qemu+ssh://kvmhost/system $host }; kvmcf 2>/dev/null'
 
-alias zz='eval $(ssh-agent -s); ssh-add $HOME/.ssh/id_rsa-lamda;'
-
+alias zz='eval $(ssh-agent -s); ssh-add $HOME/.ssh/Ecritel_id_rsa;'
+alias ssh='ssh -J noc.oxyd.net'
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 

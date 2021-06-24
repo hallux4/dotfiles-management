@@ -9,13 +9,14 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 #ZSH_THEME="af-magic"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="junkfood"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 #ENABLE_CORRECTION="true"
 
-plugins=(git, ssh-agent, virtualenvwrapper, colorize, zsh-syntax-highlighting, nyan, colored-man-pages)
+plugins=(git, ssh-agent, autoswitch_virtualenv, colorize, zsh-syntax-highlighting, nyan, colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,12 +37,12 @@ unsetopt BG_NICE
 mkdir -p $PROJECT_HOME
 
 
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 
-autoload -U compinit && compinit -u
+#autoload -U compinit && compinit -u
 
-eval "$(pyenv virtualenv-init -)"
-eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"
 
 if test ! -n "$SSH_AUTH_SOCK"
 then

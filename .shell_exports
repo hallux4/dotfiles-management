@@ -17,13 +17,13 @@ export WORKON_HOME=~/Envs
 #export GOPATH=$HOME/DEV/Go-dev
 #export PATH="$GOBIN:$GOROOT/bin:$PATH"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#export PATH="$HOME/.local/bin:$PATH"
+#export PATH="$HOME/bin:$PATH"
+#eval "$(rbenv init -)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
 #export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
 export LS_COLORS="$(vivid generate molokai)"
@@ -66,4 +66,4 @@ export LESS="${less_options[*]}"
 export PAGER='less'
 
 export DOCKER_HOST=tcp://localhost:2375
-
+export PATH="$HOME/.local/bin:$PATH"
