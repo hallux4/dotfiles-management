@@ -1,0 +1,104 @@
+#!/usr/bin/env zunit
+
+@setup {
+    function virtualenv {
+        echo virtualenv $@
+    }
+
+    export DISABLE_AUTOSWITCH_VENV="1"
+    load "../autoswitch_virtualenv.plugin.zsh"
+    unset AUTOSWITCH_DEFAULT_REQUIREMENTS
+    TARGET="$(mktemp -d)"
+    cd "$TARGET"
+}
+
+@teardown {
+    rm -rf "$TARGET"
+}
+
+@test 'mkvenv - does not create .venv if one exists' {
+    touch .venv
+
+    run mkvenv
+
+    assert $status equals 0
+    assert "$output" same_as ".venv file already exists. If this is a mistake use the rmvenv command"
+}
+
+
+@test 'mkvenv - creates .venv' {
+    mkdir myproject
+    cd myproject
+
+    run mkvenv
+
+    assert $status equals 0
+    assert "$TARGET/myproject/.venv" exists
+    # assert "$lines[1]" same_as "Creating \e[35mmyproject\e[0m virtualenv"
+
+    run cat "$TARGET/myproject/.venv"
+
+    assert $status equals 0
+    assert "$output" same_as "myproject"
+}
+
+@test 'mkvenv - uses default python if set and not specified' {
+    mkdir myproject
+    cd myproject
+    AUTOSWITCH_DEFAULT_PYTHON="python_foo"
+
+    run mkvenv
+
+    assert $status equals 0
+    assert "$TARGET/myproject/.venv" exists
+    # Assert mock output
+    assert "$lines[2]" same_as "virtualenv --python=python_foo $HOME/.virtualenvs/myproject"
+
+    run cat "$TARGET/myproject/.venv"
+
+    assert $status equals 0
+    assert "$output" same_as "myproject"
+}
+
+@test 'mkvenv - uses specified python if default set' {
+    # mock virtualenv function to test its inputs
+    function virtualenv {
+        echo virtualenv $@
+    }
+
+    mkdir myproject
+    cd myproject
+    AUTOSWITCH_DEFAULT_PYTHON="python_foo"
+
+    run mkvenv --python=python_bar
+
+    assert $status equals 0
+    assert "$TARGET/myproject/.venv" exists
+    # Assert mock output
+    assert "$lines[2]" same_as "virtualenv --python=python_bar $HOME/.virtualenvs/myproject"
+
+    run cat "$TARGET/myproject/.venv"
+
+    assert $status equals 0
+    assert "$output" same_as "myproject"
+}
+
+@test 'prints help message and disables plugin if virtualenv not setup' {
+    # Mock type to fail
+    function type() {
+        if [[ "$1" == "virtualenv" ]]; then
+            return 1
+        fi
+        return 0
+    }
+
+    run mkvenv
+
+    assert $status equals 0
+    assert "$lines[1]" contains "zsh-autoswitch-virtualenv requires virtualenv to be installed!"
+    assert "$lines[2]" is_empty
+    assert "$lines[3]" contains "If this is already installed but you are still seeing this message,"
+    assert "$lines[4]" contains "then make sure the \e[1mvirtualenv\e[0m command is in your PATH.\n"
+    assert "$lines[5]" is_empty
+    assert ${#lines} equals 4
+}
